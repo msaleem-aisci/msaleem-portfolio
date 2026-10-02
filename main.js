@@ -30,6 +30,34 @@ function renderHome() {
     `;
 }
 
+function renderResearch() {
+    const container = document.getElementById('research-section');
+    let html = `<h2 id="research" class="section-title">Research Experience</h2><div class="flex flex-col gap-8">`;
+    
+    cvData.research.forEach(res => {
+        let bulletsHtml = res.bullets.map(bullet => `<li class="text-gray-700 mb-1.5 leading-relaxed">${bullet}</li>`).join('');
+        
+        html += `
+            <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+                <div class="md:w-2/3">
+                    <h3 class="font-semibold text-lg">${res.role}</h3>
+                    <div class="text-gray-800 font-medium mt-1">${res.institution}</div>
+                    <ul class="list-disc pl-5 mt-3 marker:text-gray-400 text-[0.95rem]">
+                        ${bulletsHtml}
+                    </ul>
+                </div>
+                <div class="md:w-1/3 text-left md:text-right">
+                    <div class="text-gray-800 font-medium">${res.location}</div>
+                    <div class="text-gray-500 mt-1">${res.date}</div>
+                </div>
+            </div>
+        `;
+    });
+    html += `</div>`;
+    container.innerHTML = html;
+}
+
+
 // Render Education Section
 function renderEducation() {
     const container = document.getElementById('education-section');

@@ -9,6 +9,42 @@ const cvData = {
         `,
         image: "./dp.jpg"
     },
+    research: [
+        {
+            role: "Research Fellow",
+            institution: "Fatima Institute for Global AI Research",
+            location: "Remote",
+            date: "Apr. 2026 – Present",
+            bullets: [
+                "Collaborating on 3D cell organelle segmentation with a Senior Data Scientist from Cambridge (MRC LMB).",
+                "Developing OrganelleNet, an end-to-end lightweight 3D segmentation pipeline for Janelia CellMap dataset.",
+                "Designed a foreground-seeded patch sampling algorithm to address class imbalance.",
+                "Training and evaluating 3D segmentation models using Dice score, IoU, precision, and recall."
+            ]
+        },
+        {
+            role: "Research Collaborator",
+            institution: "Independent Research Collaboration",
+            location: "Remote",
+            date: "Jun. 2026 – Present",
+            bullets: [
+                "Collaborating with Dr. Hoi Leong Lee, Senior Lecturer at Universiti Malaysia Perlis, on crop disease benchmarking.",
+                "Building a 10,000+ image benchmark dataset, with 2,000 field images collected across rice, maize, and sugarcane.",
+                "Developing and benchmarking crop disease detection models against existing approaches."
+            ]
+        },
+        {
+            role: "Undergraduate Researcher",
+            institution: "PhytoNet (Final Year Project)",
+            location: "Okara, Pakistan",
+            date: "2024 – 2025",
+            bullets: [
+                "Engineered a 3-parallel-branched CNN to extract spatial features simultaneously from leaf images.",
+                "Achieved 92% accuracy classifying 13 diseases on test data via the Villageplant dataset.",
+                "Implemented Explainable AI heatmaps to accurately visualize the model's diagnostic focus."
+            ]
+        }
+    ],
     education: [
         {
             degree: "Bachelor of Science in Computer Science",
