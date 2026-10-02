@@ -5,7 +5,7 @@ const cvData = {
         bio: `
         AI Research Fellow at the Fatima Institute of Global AI Research through a 9-month fellowship, collaborating on 3D cell organelle segmentation in electron microscopy volumes with a Senior Data Scientist at the MRC Laboratory of Molecular Biology, University of Cambridge, UK.
 
-Furthermore, I am conducting research on crop diseases using AI under the mentorship of an Assistant Professor at a university who holds a PhD from the University of Oxford.
+        <br><br> Furthermore, I am conducting research on crop diseases using AI under the mentorship of an Assistant Professor at the University of Malaysia, holds a PhD from the University of Oxford.
         `,
         image: "./dp.jpg"
     },
