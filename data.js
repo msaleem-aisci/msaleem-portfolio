@@ -2,7 +2,7 @@
 const cvData = {
     profile: {
         name: "Muhammad Saleem",
-        bio: "AI Research Fellow at Fatima Institute of Global AI Research through a 9-month fellowship. Collaborating on 3D cell organelle segmentation in EM volumes with a senior data scientist from the MRC Lab of Microbiology at the University of Cambrdige, UK. <br>erer",
+        bio: "AI Research Fellow at Fatima Institute of Global AI Research through a 9-month fellowship. Collaborating on 3D cell organelle segmentation in EM volumes with a senior data scientist from the MRC Lab of Microbiology at the University of Cambrdige, UK. <br>Furthermore, I am also conducting research on Crop Diseases integrating AI under the mentorship of an Assistant Professor at the University of holding PhD from the Oxford University.",
         image: "./dp.jpg"
     },
     education: [
