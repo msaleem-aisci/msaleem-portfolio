@@ -11,7 +11,7 @@ function renderHome() {
                 </p>
                 <div class="flex gap-3 font-medium">
                     <a href="mailto:contact@example.com">Email</a>
-                    <div class="text-gray-300">/</div>
+                    <div class="text-gray-400 text-xl">|</div>
                     <a href="#">Google Scholar</a>
                     <div>|</div>
                     <a href="#">GitHub</a>
