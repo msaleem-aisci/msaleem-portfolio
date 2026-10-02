@@ -43,7 +43,7 @@ function renderResearch() {
                     <h3 class="font-semibold text-lg">${res.role}</h3>
                     <div class="text-gray-800 font-medium mt-1">${res.institution}</div>
                     <ul class="list-disc pl-5 mt-3 marker:text-gray-400 text-[0.95rem]">
-                        ${bulletsHtml}
+                        ${bulletsHtml}gg
                     </ul>
                 </div>
                 <div class="md:w-1/3 text-left md:text-right">
