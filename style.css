@@ -1,0 +1,145 @@
+:root {
+    --bg-color: #f4f7fb;
+    --text-color: #333333;
+    --link-color: #0056b3;
+    --base-font: 15px;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size: var(--base-font); 
+    background-color: var(--bg-color); 
+    color: var(--text-color); 
+    line-height: 1.6; 
+}
+
+a { 
+    color: var(--link-color); 
+    text-decoration: none; 
+}
+
+a:hover { 
+    text-decoration: underline; 
+}
+
+header { 
+    background: var(--bg-color); 
+    border-bottom: 1px solid #e1e8f0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    padding: 15px 0;
+}
+
+nav { 
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.nav-links { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+}
+
+main { 
+    max-width: 900px; 
+    margin: 60px auto; 
+    padding: 0 20px; 
+}
+
+.section { 
+    margin-bottom: 60px; 
+}
+
+h1, h2, h3 { 
+    font-weight: normal; 
+}
+
+h1 { 
+    font-size: 2.2rem; 
+    font-weight: bold; 
+    margin-bottom: 10px;
+}
+
+h2 { 
+    border-bottom: 1px solid #d3dbe3; 
+    padding-bottom: 5px; 
+    margin-bottom: 25px; 
+    font-size: 1.4rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+}
+
+/* Home Section */
+.home-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 50px; 
+    flex-wrap: wrap-reverse; 
+}
+
+.home-text { 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.home-image { 
+    flex: 0 0 280px; 
+}
+
+.home-image img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 20px; 
+    display: block; 
+}
+
+/* CV Items Layout */
+.cv-item { 
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 30px; 
+    flex-wrap: wrap; 
+}
+
+.cv-main { 
+    flex: 1; 
+    min-width: 250px; 
+    padding-right: 30px; 
+}
+
+.cv-main h3 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cv-meta { 
+    text-align: right; 
+    min-width: 160px; 
+}
+
+.cv-meta p { 
+    margin-bottom: 3px; 
+}
+
+.cgpa { 
+    font-weight: bold; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 650px) {
+    .nav-links { flex-direction: column; text-align: center; gap: 10px; }
+    .home-container { flex-direction: column-reverse; text-align: center; gap: 30px; }
+    .home-image { flex: 0 0 200px; margin: 0 auto; }
+    .cv-item { flex-direction: column; }
+    .cv-meta { text-align: left; margin-top: 10px; }
+}
