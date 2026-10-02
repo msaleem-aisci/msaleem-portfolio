@@ -3,7 +3,7 @@ const cvData = {
     profile: {
         name: "Muhammad Saleem",
         bio: "AI Researcher specializing in biomedical and agricultural computer vision, 3D volumetric organelle segmentation, and explainable AI. Passionate about developing robust, interpretable machine learning models for critical domains.",
-        image: "/dp"
+        image: "./dp.jpg"
     },
     education: [
         {
