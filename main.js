@@ -23,7 +23,7 @@ function renderHome() {
             <div class="md:w-[40%] w-full flex justify-center md:justify-end">
                 <img src="${cvData.profile.image}" 
                      alt="${cvData.profile.name}" 
-                     style="border-radius: 20px;"
+                     style="border-radius: 100%;"
                      class="w-full max-w-[230px] h-auto object-cover shadow-lg">
             </div>
         </section>
