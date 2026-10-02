@@ -9,7 +9,7 @@ function renderHome() {
                 <p class="text-gray-700 leading-relaxed mb-6">
                     ${cvData.profile.bio}
                 </p>
-                <div class="flex gap-5 font-medium">
+                <div class="flex gap-3 font-medium">
                     <a href="mailto:contact@example.com">Email</a>
                     <div>|</div>
                     <a href="#">Google Scholar</a>
@@ -24,7 +24,7 @@ function renderHome() {
                 <img src="${cvData.profile.image}" 
                      alt="${cvData.profile.name}" 
                      style="border-radius: 20px;"
-                     class="w-full max-w-[230px] h-auto object-cover shadow-xl">
+                     class="w-full max-w-[230px] h-auto object-cover shadow-lg">
             </div>
         </section>
     `;
