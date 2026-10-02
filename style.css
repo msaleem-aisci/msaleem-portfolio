@@ -32,11 +32,11 @@ main a:hover {
 
 /* Header Logo Styling */
 .logo {
-    width: 10px;
-    height: 10px;
+    width: 36px;
+    height: 36px;
     background-color: #1a1a1a;
     color: #ffffff;
-    border-radius: 50%;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
