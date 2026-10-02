@@ -13,9 +13,9 @@ function renderHome() {
                     <a href="mailto:contact@example.com">Email</a>
                     <div class="text-gray-400 ">|</div>
                     <a href="#">Google Scholar</a>
-                    <div>|</div>
+                    <div class="text-gray-400 ">|</div>
                     <a href="#">GitHub</a>
-                    <div>|</div>
+                   <div class="text-gray-400 ">|</div>
                     <a href="#">LinkedIn</a>
                 </div>
             </div>
