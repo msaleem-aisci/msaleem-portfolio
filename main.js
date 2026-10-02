@@ -24,7 +24,7 @@ function renderHome() {
                 <img src="${cvData.profile.image}" 
                      alt="${cvData.profile.name}" 
                      style="border-radius: 15px; "
-                     class="w-full max-w-[230px] border h-auto object-cover shadow-sm">
+                     class="w-full max-w-[250px] border h-auto object-cover shadow-sm">
             </div>
         </section>
     `;
