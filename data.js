@@ -1,53 +1,56 @@
+// Data structure acting as the single source of truth
 const cvData = {
-    home: {
+    profile: {
         name: "Muhammad Saleem",
-        title: "AI Research Mentor & Computer Vision Researcher",
-        bio: "Specializing in biomedical computer vision, 3D volumetric organelle segmentation, and agricultural pathology. Experienced in mathematically deriving network architectures from first principles and building robust deep learning pipelines.",
-        image: "https://via.placeholder.com/400" // Replace with your actual image path
+        bio: "AI Researcher specializing in biomedical and agricultural computer vision, 3D volumetric organelle segmentation, and explainable AI. Passionate about developing robust, interpretable machine learning models for critical domains.",
+        image: "/dp"
     },
     education: [
         {
-            institution: "University of Okara",
+            degree: "Master of Science in Computer Science",
+            institution: "University of Arkansas at Little Rock",
+            cgpa: null,
+            maxCgpa: null,
+            transcript: null,
+            location: "Little Rock, AR",
+            date: "Admitted"
+        },
+        {
             degree: "Bachelor of Science in Computer Science",
+            institution: "University of Okara",
+            cgpa: "3.32",
+            maxCgpa: "4",
+            transcript: "#", // Add actual link here
             location: "Okara, Pakistan",
-            date: "Aug 2021 - Aug 2025",
-            cgpa: "3.32 / 4",
-            transcriptLink: "#"
+            date: "Aug 2025"
         }
     ],
     experience: [
         {
             role: "Research Fellow",
             company: "Fatima Institute for Global AI Research",
+            description: "Focusing on 3D volumetric organelle segmentation and advanced biomedical imaging.",
             location: "Remote",
-            date: "Apr 2026 - Present",
-            description: "Mentoring international students in programming and conducting 3D cellular computer vision research."
-        },
-        {
-            role: "Section Leader",
-            company: "Stanford Code in Place",
-            location: "Remote",
-            date: "Apr 2026 - Jun 2026",
-            description: "Taught weekly Python programming sections to international students."
+            date: "April 2026 – Present"
         },
         {
             role: "AI Engineer",
             company: "Elevate Business Solution",
+            description: "Developed and deployed scalable machine learning models for enterprise solutions.",
             location: "Lahore, Pakistan",
-            date: "Dec 2024 - Dec 2025",
-            description: "Constructed deep learning models for time-series forecasting."
+            date: "Dec 2024 – Dec 2025"
         }
     ],
     projects: [
         {
-            name: "OrganelleNet",
-            date: "May 2026 - Present",
-            description: "3D UNet segmentation pipelines on Janelia CellMap volume EM data exploring patch extents and spatial jitter."
+            title: "PhytoNet",
+            description: "Multi-branch CNN with explainable AI heatmaps for agricultural leaf disease classification.",
+            link: "#"
         },
         {
-            name: "PhytoNet",
-            date: "2025 - 2026",
-            description: "Multi-branch convolutional neural network with explainable AI heatmaps for agricultural leaf disease classification."
+            title: "GemmaSight",
+            description: "Dual-path medical vision system integrated with MedGemma and FAISS for colorectal cancer diagnostic reports.",
+            link: "#"
         }
     ]
 };
