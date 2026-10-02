@@ -1,14 +1,29 @@
-// Data structure acting as the single source of truth
 const cvData = {
     profile: {
         name: "Muhammad Saleem",
-        bio: `
-        AI Research Fellow at the Fatima Institute of Global AI Research through a 9-month fellowship, collaborating on 3D cell organelle segmentation in electron microscopy volumes with a Senior Data Scientist at the MRC Laboratory of Molecular Biology, University of Cambridge, UK.
-
-        <br> Furthermore, I am conducting research on crop diseases using AI under the mentorship of an Assistant Professor at the University of Malaysia, holds a PhD from the University of Oxford.
-        `,
-        image: "./dp.jpg"
+        bio: "AI Researcher specializing in biomedical and agricultural computer vision, 3D volumetric organelle segmentation, and explainable AI. Passionate about developing robust, interpretable machine learning models for critical domains.",
+        image: "https://placehold.co/600x800/e2e8f0/475569?text=Profile+Photo"
     },
+    education: [
+        {
+            degree: "Master of Science in Computer Science",
+            institution: "University of Arkansas at Little Rock",
+            cgpa: null,
+            maxCgpa: null,
+            transcript: null,
+            location: "Little Rock, AR",
+            date: "Admitted"
+        },
+        {
+            degree: "Bachelor of Science in Computer Science",
+            institution: "University of Okara",
+            cgpa: "3.32",
+            maxCgpa: "4",
+            transcript: "#", 
+            location: "Okara, Pakistan",
+            date: "Aug 2021 – Aug 2025"
+        }
+    ],
     research: [
         {
             role: "Research Fellow",
@@ -45,37 +60,19 @@ const cvData = {
             ]
         }
     ],
-    education: [
-        {
-            degree: "Bachelor of Science in Computer Science",
-            institution: "University of Okara",
-            cgpa: "3.32",
-            maxCgpa: "4",
-            transcript: "#", // Add actual link here
-            location: "Okara, Pakistan",
-            date: "Nov. 2021– Aug. 2025"
-        }
-    ],
     experience: [
-        {
-            role: "Research Fellow",
-            company: "Fatima Institute for Global AI Research",
-            description: "Focusing on 3D volumetric organelle segmentation and advanced biomedical imaging.",
-            location: "Remote",
-            date: "April 2026 – Present"
-        },
         {
             role: "AI Engineer",
             company: "Elevate Business Solution",
-            description: "Developed and deployed scalable machine learning models for enterprise solutions.",
+            description: "Built an XGBoost baseline for time-series monthly sales forecasting, achieving an initial 86% R2. Upgraded the pipeline using an LSTM with attention mechanisms, enhancing prediction R2 to 91%.",
             location: "Lahore, Pakistan",
             date: "Dec 2024 – Dec 2025"
         }
     ],
     projects: [
         {
-            title: "PhytoNet",
-            description: "Multi-branch CNN with explainable AI heatmaps for agricultural leaf disease classification.",
+            title: "Hypo-TCN",
+            description: "Architected a Residual Causal TCN with Self-Attention to predict hypotension 3-12 hours early.",
             link: "#"
         },
         {

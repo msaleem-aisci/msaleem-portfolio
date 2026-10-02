@@ -9,13 +9,10 @@ function renderHome() {
                 <p class="text-gray-700 leading-relaxed mb-6">
                     ${cvData.profile.bio}
                 </p>
-                <div class="flex gap-3 font-medium">
-                    <a href="mailto:contact@example.com">Email</a>
-                    <div class="text-gray-400 ">|</div>
+                <div class="flex gap-5 font-medium">
+                    <a href="mailto:msaleem.research@gmail.com">Email</a>
                     <a href="#">Google Scholar</a>
-                    <div class="text-gray-400 ">|</div>
                     <a href="#">GitHub</a>
-                   <div class="text-gray-400 ">|</div>
                     <a href="#">LinkedIn</a>
                 </div>
             </div>
@@ -23,13 +20,39 @@ function renderHome() {
             <div class="md:w-[40%] w-full flex justify-center md:justify-end">
                 <img src="${cvData.profile.image}" 
                      alt="${cvData.profile.name}" 
-                     style="border-radius: 15px; "
-                     class="w-full max-w-[250px] border h-auto object-cover shadow-sm">
+                     style="border-radius: 20px;"
+                     class="w-full max-w-[280px] h-auto object-cover shadow-sm">
             </div>
         </section>
     `;
 }
 
+// Render Education Section
+function renderEducation() {
+    const container = document.getElementById('education-section');
+    let html = `<h2 id="education" class="section-title">Education</h2><div class="flex flex-col gap-8">`;
+    
+    cvData.education.forEach(edu => {
+        html += `
+            <div class="flex flex-col md:flex-row justify-between items-start gap-4">
+                <div class="md:w-2/3">
+                    <h3 class="font-semibold text-lg">${edu.degree}</h3>
+                    <div class="text-gray-800 mt-1">${edu.institution}</div>
+                    ${edu.cgpa ? `<div class="mt-2 text-gray-800"><strong>CGPA:</strong> ${edu.cgpa} /${edu.maxCgpa}</div>` : ''}
+                    ${edu.transcript ? `<div class="mt-1"><a href="${edu.transcript}" target="_blank">View Transcript</a></div>` : ''}
+                </div>
+                <div class="md:w-1/3 text-left md:text-right">
+                    <div class="text-gray-800 font-medium">${edu.location}</div>
+                    <div class="text-gray-500 mt-1">${edu.date}</div>
+                </div>
+            </div>
+        `;
+    });
+    html += `</div>`;
+    container.innerHTML = html;
+}
+
+// Render Research Section
 function renderResearch() {
     const container = document.getElementById('research-section');
     let html = `<h2 id="research" class="section-title">Research Experience</h2><div class="flex flex-col gap-8">`;
@@ -43,40 +66,12 @@ function renderResearch() {
                     <h3 class="font-semibold text-lg">${res.role}</h3>
                     <div class="text-gray-800 font-medium mt-1">${res.institution}</div>
                     <ul class="list-disc pl-5 mt-3 marker:text-gray-400 text-[0.95rem]">
-                        ${bulletsHtml}gg
+                        ${bulletsHtml}
                     </ul>
                 </div>
                 <div class="md:w-1/3 text-left md:text-right">
                     <div class="text-gray-800 font-medium">${res.location}</div>
                     <div class="text-gray-500 mt-1">${res.date}</div>
-                </div>
-            </div>
-        `;
-    });
-    html += `</div>`;
-    container.innerHTML = html;
-}
-
-
-// Render Education Section
-function renderEducation() {
-    const container = document.getElementById('education-section');
-    let html = `<h2 id="education" class="section-title">Education</h2><div class="flex flex-col gap-8">`;
-    
-    cvData.education.forEach(edu => {
-        html += `
-            <div class="flex flex-col md:flex-row justify-between items-start gap-4">
-                <!-- Left Details -->
-                <div class="md:w-2/3">
-                    <h3 class="font-semibold text-lg">${edu.degree}</h3>
-                    <div class="text-gray-800 mt-1">${edu.institution}</div>
-                    ${edu.cgpa ? `<div class="mt-2 text-gray-800"><strong>CGPA:</strong> ${edu.cgpa} /${edu.maxCgpa}</div>` : ''}
-                    ${edu.transcript ? `<div class="mt-1"><a href="${edu.transcript}" target="_blank">View Transcript</a></div>` : ''}
-                </div>
-                <!-- Right Location & Date -->
-                <div class="md:w-1/3 text-left md:text-right">
-                    <div class="text-gray-800 font-medium">${edu.location}</div>
-                    <div class="text-gray-500 mt-1">${edu.date}</div>
                 </div>
             </div>
         `;
@@ -96,7 +91,7 @@ function renderExperience() {
                 <div class="md:w-2/3">
                     <h3 class="font-semibold text-lg">${exp.role}</h3>
                     <div class="text-gray-800 font-medium mt-1">${exp.company}</div>
-                    <div class="text-gray-600 mt-2">${exp.description}</div>
+                    <div class="text-gray-600 mt-2 leading-relaxed">${exp.description}</div>
                 </div>
                 <div class="md:w-1/3 text-left md:text-right">
                     <div class="text-gray-800 font-medium">${exp.location}</div>
@@ -153,7 +148,6 @@ function initScrollSpy() {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            // Adjust for sticky header
             if (scrollY >= sectionTop - 120) {
                 current = section.getAttribute('id').replace('-section', '');
             }
@@ -172,6 +166,7 @@ function initScrollSpy() {
 document.addEventListener('DOMContentLoaded', () => {
     renderHome();
     renderEducation();
+    renderResearch();
     renderExperience();
     renderProjects();
     initMobileMenu();
